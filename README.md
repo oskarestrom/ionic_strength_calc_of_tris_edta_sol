@@ -36,7 +36,7 @@ ionic_strength_calc_of_TE.calc_ionic_strength_TE(concTE, settings)
 You can contribute by making a general ionic-strength-calculator for all kinds of solutions. Please send me an email if you want to collaborate on this.
 
 ## How the script works
-The script calculates the ionic strength based on the detailed description by [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) ( See the bottom of the page for a reference list). We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
+The script calculates the ionic strength based on the detailed description by [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) ( See the bottom of the page for a reference list). For an even more detailed description of the chemistry, look at the two papers from Persat et al.. We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
 
 This script relies on the chemistry functionality of the python library SymPy (v. 1.10.1).
 
@@ -117,17 +117,17 @@ Then, the ionic strength is given by the following for TE:
 $$I = 1/2\left( [TH^+] + [H^+] + [OH^-] + 4[H_2E^{2-}] + 9[HE^{3-}] + 16[E^{4-}] + [\beta^{-}] \right)$$
 
 #### Steps to calculate the ionic strength of a multivalent ion solution:
-Iarko et al. [[Iarko, 2015]](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) describes in the appendix C of their article how to calculate the ionic strength of a solution:
+[Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4)describes in the appendix C of their article how to calculate the ionic strength of a solution:
 1. Guess the activity coefficients, $\gamma_X$=1 for all species. 
 1. Solve the equations 1-9 and get a value of the ionic strength.
 1. Get new values of the activity coefficients $\gamma_X$ based on the new value of the ionic strength.
 1. Repeat the two previous steps till the ionic strength converges.
 
 #### References
-Hsieh, C. C., Balducci, A., & Doyle, P. S. (2008). Ionic effects on the equilibrium dynamics of DNA confined in nanoslits. Nano letters, 8(6), 1683-1688.
+Iarko, V., Werner, E., Nyberg, L. K., Müller, V., Fritzsche, J., Ambjörnsson, T., ... & Mehlig, B. (2015). Extension of nanoconfined DNA: Quantitative comparison between experiment and theory. Physical review E, 92(6), 062701.
 
 Persat, A., Chambers, R. D., & Santiago, J. G. (2009). Basic principles of electrolyte chemistry for microfluidic electrokinetics. Part I: acid–base equilibria and pH buffers. Lab on a Chip, 9(17), 2437-2453.
 
 Persat, A., Suss, M. E., & Santiago, J. G. (2009). Basic principles of electrolyte chemistry for microfluidic electrokinetics. Part II: Coupling between ion mobility, electrolysis, and acid–base equilibria. Lab on a Chip, 9(17), 2454-2469.
 
-Iarko, V., Werner, E., Nyberg, L. K., Müller, V., Fritzsche, J., Ambjörnsson, T., ... & Mehlig, B. (2015). Extension of nanoconfined DNA: Quantitative comparison between experiment and theory. Physical review E, 92(6), 062701.
+Hsieh, C. C., Balducci, A., & Doyle, P. S. (2008). Ionic effects on the equilibrium dynamics of DNA confined in nanoslits. Nano letters, 8(6), 1683-1688.
