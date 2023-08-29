@@ -3,7 +3,7 @@ You can use this package to calculate the Ionic Strength of a Tris-EDTA solution
 
 ## Quick Start Guide
 
-First install Sympy (version 1.10.1):
+First install Sympy (version 1.10.1) by writing this in your anaconda prompt:
 ```console
 pip install sympy==1.10.1
 ```
@@ -38,7 +38,7 @@ You can contribute by making a general ionic-strength-calculator for all kinds o
 ## How the script works
 The script calculates the ionic strength based on the detailed description by Iarko et al. (See the bottom of the page for a reference list). We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
 
-This script would not work without the python library SymPy (v. 1.10.1).
+This script relies on the chemistry functionality of the python library SymPy (v. 1.10.1).
 
 Below I give brief chemistry explanations of some of the terms used. See Iarko et al. for a more detailed description.
 
@@ -61,7 +61,7 @@ Iarko et al. writes that because of most of the EDTA is triply ionized at their 
 
 Assumptions:
 - Valency of Tris: 1, EDTA (multivalent): 1-4, BME: 1.
-- 25$^{\circ}$C for determining the pKs
+- 25$`^{\circ}`$ C for determining the pKs
 
 #### Calculation of the ionic strength for TE with BME
 
