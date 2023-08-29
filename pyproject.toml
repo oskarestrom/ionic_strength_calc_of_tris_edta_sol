@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling", "numpy>=1.21.5", "pandas>=1.4.4", "sympy==1.10.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ionic_strength_calc_of_tris-edta"
+version = "0.0.1"
+authors = [
+  { name="Oskar E. Strom", email="oskarestrom@protonmail.com" },
+]
+description = "Calculates the Ionic Strength of a Tris-EDTA solution"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/oskarestrom/nd2handling/ionic_strength_calc_of_tris-EDTA"

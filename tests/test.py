@@ -1,5 +1,5 @@
 #%%
-import calc.calc as calc
+import src.calc.calc as calc
 import importlib
 importlib.reload(calc)
 import numpy as np

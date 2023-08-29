@@ -1,12 +1,6 @@
-
-
 #Import libraries:
 import sympy as sym
 import os
-#Info on sympy:
-# https://apmonitor.com/che263/index.php/Main/PythonSolveEquations
-# https://docs.sympy.org/latest/tutorial/solvers.html
-# https://docs.sympy.org/latest/modules/solvers/solveset.html
 import numpy as np
 import math  #For importing the value of Pi
 import pandas as pd
@@ -37,6 +31,7 @@ def calc_ionic_strength_TE(concTE, settings):
 
 
 def get_species_data_frame(with_BME = False, c_BME_percent = 0):
+    """Get the data frame with the species data"""
 
     #Get dissociation constants
     pK_w, pK_b_Tris, pK_a_EDTA, pK_a_B = get_diss_constants()
@@ -79,6 +74,8 @@ def get_species_data_frame(with_BME = False, c_BME_percent = 0):
     return df
 
 def get_C_BME(c_BME_percent):
+    """Get the concentration of BME [M or mol/L]"""
+
     c_BME_percent = 0.03 # Concentration of BME [% (v/v) or mL BME/mL total]
     M_BME = 78.13# Molar mass for BME [g/mol], Source: Sigma-Aldrich
     rho_BME = 1.114 #Density for BME [g/mL] at 25 °C, Source: Thomas Scientific
@@ -87,6 +84,8 @@ def get_C_BME(c_BME_percent):
     return C_B
 
 def get_diss_constants():
+    """Get the dissociation constants"""
+
     pK_w = 14.0 #Dissociation constant for water at T=25C
     pK_b_Tris = 5.94 #Tris base dissociation constant, For T=25C from [Iarko 2015]
     pK_a_EDTA = np.array([1.99,2.67,6.16,10.26]) #EDTA acid dissociation constants, For T=25C from [Iarko 2015]
@@ -94,8 +93,10 @@ def get_diss_constants():
     return pK_w, pK_b_Tris, pK_a_EDTA, pK_a_B
 
 def iterate_func(df, concTE, settings):
-    A = 0.51 #Constant for the Davies equation
+    """Iterates the calculation until the ionic strength converges"""
 
+    A = 0.51 #Constant for the Davies equation
+    c_BME_percent = settings['c_BME_percent'] #BME concentration in percent
     #Get dissociation constants
     pK_w, pK_b_Tris, pK_a_EDTA, pK_a_B = get_diss_constants()
 
@@ -271,12 +272,14 @@ def iterate_func(df, concTE, settings):
     return df_all, I_s, pH_s
 
 def show_eq_fun(system):
+    """Displaying of the equations used to solve the system  in each loop"""
     print(f'\nA set of {len(system)} equations:')
     for x in system:
         print(x)
 
 def showAllSol_fun(s):
     """Displaying of the all possible solutions (incl. negative ones)"""
+
     print(f'\nFound {len(s)} sets of solutions:')
     for i in range(len(s)):
         print(f'Solution {i+1}:')
@@ -286,9 +289,12 @@ def showAllSol_fun(s):
 
 # Save the data:
 def get_I_contribution(c,val):
+    """Calculate the contribution to the ionic strength from a species"""
     return 0.5*c*(val**2)
 
 def save_to_file_fun(df_all, concTE, I_s, pH_s, settings, extra_str=''):
+    """Save the data to two csv files.
+    One file contains the concentrations of all species (df_all) and the other contains the ionic strength and pH. (df)"""
     c_BME_percent = settings['c_BME_percent'] #BME concentration in percent
     basepath = settings['basepath'] #Path to the folder where the results should be saved
 
