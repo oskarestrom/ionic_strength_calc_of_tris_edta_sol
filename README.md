@@ -119,9 +119,9 @@ $$I = 1/2\left( [TH^+] + [H^+] + [OH^-] + 4[H_2E^{2-}] + 9[HE^{3-}] + 16[E^{4-}]
 #### Steps to calculate the ionic strength of a multivalent ion solution:
 Iarko et al. [[Iarko, 2015]](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) describes in the appendix C of their article how to calculate the ionic strength of a solution:
 1. Guess the activity coefficients, $\gamma_X$=1 for all species. 
-- Solve the equations 1-9 and get a value of the ionic strength.
-- Get new values of the activity coefficients $\gamma_X$ based on the new value of the ionic strength.
-- Repeat the two previous steps till the ionic strength converges.
+1. Solve the equations 1-9 and get a value of the ionic strength.
+1. Get new values of the activity coefficients $\gamma_X$ based on the new value of the ionic strength.
+1. Repeat the two previous steps till the ionic strength converges.
 
 #### References
 Hsieh, C. C., Balducci, A., & Doyle, P. S. (2008). Ionic effects on the equilibrium dynamics of DNA confined in nanoslits. Nano letters, 8(6), 1683-1688.
