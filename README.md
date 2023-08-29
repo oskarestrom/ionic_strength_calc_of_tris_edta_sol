@@ -36,11 +36,11 @@ ionic_strength_calc_of_TE.calc_ionic_strength_TE(concTE, settings)
 You can contribute by making a general ionic-strength-calculator for all kinds of solutions. Please send me an email if you want to collaborate on this.
 
 ## How the script works
-The script calculates the ionic strength based on the detailed description by Iarko et al. (See the bottom of the page for a reference list). We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
+The script calculates the ionic strength based on the detailed description by [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) ( See the bottom of the page for a reference list). We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
 
 This script relies on the chemistry functionality of the python library SymPy (v. 1.10.1).
 
-Below I give brief chemistry explanations of some of the terms used. See Iarko et al. for a more detailed description.
+Below I give brief chemistry explanations of some of the terms used. See [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) for a more detailed description.
 
 
 #### Ionic strength
@@ -50,22 +50,24 @@ $$I = \dfrac{1}{2} \sum_{i=1}^{n} c_i z_i^2$$
 
 where the one half is added to include both anions and cations, $c_i$ is the molar concentration of the ion i (in M) and $z_i$ is the charge of the ion i. 
 
-Our buffer consists of (1x TE with BME):
+The buffer consists of (1x TE with BME):
 - 10 mM Tris
 - 1 mM EDTA
 - 3% (v/v) Betamercaptoethanol (BME)
 
-However, even though we are using TE, I first calculate the ionic strength for TBE buffer as we have good literature values to validate our calculation results.
+However, even though we are using TE, I first calculated the ionic strength for TBE buffer as we have good literature values to validate our calculation results. The percent error (100 × [calculated value – literature value] / literature value)
+is below 0.6 % based on the values from Hsieh et al.
 
-Iarko et al. writes that because of most of the EDTA is triply ionized at their pH 8.5 (our pH is pH 8) they ignore the negliable concentrations of neutral and singly ionized EDTA.
+Note that [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) writes that because of most of the EDTA is triply ionized at their pH 8.5 (our pH is pH 8) they ignore the negliable concentrations of neutral and singly ionized EDTA.
 
-Assumptions:
+We make the following assumptions:
 - Valency of Tris: 1, EDTA (multivalent): 1-4, BME: 1.
-- 25$`^{\circ}`$ C for determining the pKs
+- The temperature, T = 25$`^{\circ}`$ C for determining the pKs
 
 #### Calculation of the ionic strength for TE with BME
 
-We have the following product from Sigma-Aldrich: [T9285](https://www.sigmaaldrich.com/catalog/search?term=T9285-100ML&interface=All&N=0&mode=match partialmax&lang=en&region=SE&focus=product)
+We have the following product from Sigma-Aldrich:  - Tris-EDTA buffer solution, 100 x, for molecular biology
+(Code: T9285-100ML)
 The molar concentration of a species X is given by [X] and its activity coefficient given by $\gamma_X$
 
 At N x TE, the solution contains N x 0.01 M Tris-HCl and N x 0.001 M EDTA. The pH should be approximately 8. The molar concentration of BME depends on the volumetric concentration, see calculations below.
@@ -103,7 +105,7 @@ $$pH = pK_a + log \left( \dfrac{[A^-]}{[HA]} \right)$$
 
 where $pK_a$ is the acid disassociation constant, $[A^-]$ is the concentration of the buffer's base form and $[HA]$ is the concentration of the buffer's acid form.
 
-#### The Davies equation
+### The Davies equation
 The Davies equation [Davies, 1938] gives the mean molal efficiency coefficient $\gamma_X$ of a n electrolyte at 25°C that dissociates into ions having valence (charge) $z_X$ as a function of ionic strength, $I$:
 
 $$log_{10}(\gamma_X) = -0.51z_X^2 \left( \dfrac{\sqrt{I}}{1+\sqrt{I}} -0.3I \right)$$
