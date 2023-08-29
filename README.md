@@ -1,9 +1,9 @@
-# ionic_strength_calc_of_TE
+# ionic_strength_calc_of_tris-EDTA
 You can use this package to calculate the Ionic Strength of a Tris-EDTA solution (with or without betamercaptoethanol or BME).
 
 ## Quick Start Guide
 
-This is how a function using the package could look like:
+This is how a script using the package could look like:
 ```python
 import ionic_strength_calc_of_TE
 import numpy as np
@@ -21,7 +21,7 @@ settings = {
     'showEq': False, #True if the equilibrium equations should be shown
     'showConc': False, #True if the concentrations should be shown
     'showCoeffs': False, #True if the coefficients should be shown
-    'basepath' : '', #Path to the folder where the results should be saved
+    'basepath' : r'C:\Users\XX\', #Path to the folder where the results should be saved
 }
 
 ionic_strength_calc_of_TE.calc_ionic_strength_TE(concTE, settings)
