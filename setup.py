@@ -13,12 +13,12 @@ version = read_file("VERSION")
 requirements = read_requirements("requirements.txt")
 
 setup(
-    name="calc_ionic_strength_of_TE",
+    name="ionic_strength_calc_of_tris-EDTA",
     version="0.1.0",
-    packages=["calc_ionic_strength_of_TE",],
+    packages=["ionic_strength_calc_of_tris-EDTA",],
     install_requires=[],
     license="MIT",
-    url="https://github.com/oskarestrom/nd2handling/calc_ionic_strength_of_TE",
+    url="https://github.com/oskarestrom/nd2handling/ionic_strength_calc_of_tris-EDTA",
     author="Oskar Ström",
     author_email="oskarestrom@protonmail.com",
     description="Calculates the Ionic Strength of a Tris-EDTA solution",

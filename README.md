@@ -3,6 +3,11 @@ You can use this package to calculate the Ionic Strength of a Tris-EDTA solution
 
 ## Quick Start Guide
 
+First install Sympy (version 1.10.1):
+```console
+pip install sympy==1.10.1
+```
+
 This is how a script using the package could look like:
 ```python
 import ionic_strength_calc_of_TE
@@ -33,7 +38,7 @@ You can contribute by making a general ionic-strength-calculator for all kinds o
 ## How the script works
 The script calculates the ionic strength based on the detailed description by Iarko et al. (See the bottom of the page for a reference list). We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
 
-This script would not work without the python library SymPy (v. 1.7.1).
+This script would not work without the python library SymPy (v. 1.10.1).
 
 Below I give brief chemistry explanations of some of the terms used. See Iarko et al. for a more detailed description.
 
