@@ -32,7 +32,9 @@ settings = {
 ionic_strength_calc_of_TE.calc_ionic_strength_TE(concTE, settings)
 ```
 
-## Miscellanous
+See the files "df_TE_0_BME.csv" and "df_all_TE_0_BME.csv" in this repository for the output files by the code above.
+
+## Contributions
 You can contribute by making a general ionic-strength-calculator for all kinds of solutions. Please send me an email if you want to collaborate on this.
 
 ## How the script works
