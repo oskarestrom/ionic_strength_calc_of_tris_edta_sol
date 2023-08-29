@@ -4,7 +4,7 @@ You can use this package to calculate the Ionic Strength of a Tris-EDTA solution
 ## Quick Start Guide
 
 This is how a function using the package could look like:
-```
+```python
 import ionic_strength_calc_of_TE
 import numpy as np
 
