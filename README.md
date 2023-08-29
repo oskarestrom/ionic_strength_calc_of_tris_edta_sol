@@ -42,9 +42,9 @@ The script calculates the ionic strength based on the detailed description by [I
 This script relies on the equation solving functionality of the python library SymPy (v. 1.10.1).
 
 See the following links for some information of equation solving in SymPy:
-https://apmonitor.com/che263/index.php/Main/PythonSolveEquations
-https://docs.sympy.org/latest/tutorial/solvers.html
-https://docs.sympy.org/latest/modules/solvers/solveset.html
+- https://apmonitor.com/che263/index.php/Main/PythonSolveEquations
+- https://docs.sympy.org/latest/tutorial/solvers.html
+- https://docs.sympy.org/latest/modules/solvers/solveset.html
 
 
 Below I give brief chemistry explanations of some of the terms used. See [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) for a more detailed description.
