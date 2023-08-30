@@ -8,6 +8,12 @@ First install Sympy (version 1.10.1) by writing this in your anaconda prompt:
 pip install sympy==1.10.1
 ```
 
+# Install the package
+Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta/0.0.1/). Install it on your anaconda prompt by:
+```shell 
+pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta==0.0.1
+```
+
 This is how a script using the package could look like:
 ```python
 import ionic_strength_calc_of_TE
