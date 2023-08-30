@@ -1,5 +1,5 @@
 # ionic_strength_calc_of_tris-EDTA
-Calculating the Ionic Strength of a multivalent buffer solution such as Tris-EDTA is not straight forward. All the ions added into the buffer affect each other and form an equilibrium. With Tris-EDTA, you end up with about a system of 7-9 equations to solve. 
+Calculating the Ionic Strength of a multivalent buffer solution such as Tris-EDTA is not straight forward. All the ions of the buffer affect each other and form an equilibrium. With Tris-EDTA, you end up with about a system of 7-9 equations to solve. 
 
 This package calculates the Ionic Strength and pH of a Tris-EDTA solution (with or without betamercaptoethanol or BME) for you and extracts the calculated data to a .csv file.
 
