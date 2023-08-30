@@ -3,12 +3,20 @@ You can use this package to calculate the Ionic Strength of a Tris-EDTA solution
 
 ## Quick Start Guide
 
+### Dependencies
+
 First install Sympy (version 1.10.1) by writing this in your anaconda prompt:
 ```shell
 pip install sympy==1.10.1
 ```
+You also need numpy and pandas:
+```shell
+pip install numpy >=1.21.5
+pip install pandas >= 1.4.4
+```
 
-# Install the package
+
+### Install the package
 Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta/0.0.1/). Install it on your anaconda prompt by:
 ```shell 
 pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta==0.0.1
