@@ -116,9 +116,9 @@ We make the following assumptions:
 - The temperature, T = 25$`^{\circ}`$ C for determining the pKs
 - That the following values are correct:
     - Dissociation constant for water $pK_w$ = 14.0 at T = 25$`^{\circ}`$ C.
-    - Tris base dissociation constant, $pK_{b}_{Tris}$ = 5.94 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
-    - EDTA acid dissociation constants, $pK_{a}_{EDTA}$ = 1.99,2.67,6.16,10.26 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
-    - BME acid dissociation constant $pK_{a}_{BME}$ = 9.6 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    - Tris base dissociation constant, $pK_{b_{Tris}}$ = 5.94 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    - EDTA acid dissociation constants, $pK_{a_{EDTA}}$ = 1.99,2.67,6.16,10.26 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    - BME acid dissociation constant $pK_{a_{BME}}$ = 9.6 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
     - The constant for the Davies equation, A = 0.51 
     - Molar mass for BME, $M_{BME}$ = 78.13 g/mol, Source: Sigma-Aldrich
     - Density for BME, $\rho_{BME}$ = 1.114 g/mL for T = 25$`^{\circ}, Source: Thomas Scientific
