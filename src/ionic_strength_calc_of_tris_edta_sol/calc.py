@@ -76,7 +76,7 @@ def get_species_data_frame(with_BME = False, c_BME_percent = 0):
 def get_C_BME(c_BME_percent):
     """Get the concentration of BME [M or mol/L]"""
 
-    c_BME_percent = 0.03 # Concentration of BME [% (v/v) or mL BME/mL total]
+    #c_BME_percent Concentration of BME [% (v/v) or mL BME/mL total]
     M_BME = 78.13# Molar mass for BME [g/mol], Source: Sigma-Aldrich
     rho_BME = 1.114 #Density for BME [g/mL] at 25 °C, Source: Thomas Scientific
     C_B = c_BME_percent * rho_BME * 1e3 / M_BME #Concentration of BME [M or mol/L] unit calc = [mL BME / mL * g/mL * 1000 * mol/g]
