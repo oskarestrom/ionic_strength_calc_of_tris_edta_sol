@@ -49,14 +49,14 @@ ion.calc_ionic_strength_TE(concTE, settings)
 ```
 ### Output
 See the files "df_TE_0_BME.csv" and "df_all_TE_0_BME.csv" in this repository for the output by the code above. I also post the content here:
-**Output - "df_TE_0_BME.csv"**:
+#### Output - "df_TE_0_BME.csv":
 This file contains a list of the samples used. Here, two concentrations of Tris-EDTA were used (1 mM and 5 mM). The resulting ionic strength and pH are presented.
 |FIELD1|conc_TE|conc_BME|I                 |pH               |
 |------|-------|--------|------------------|-----------------|
 |0     |1      |0.0     |6.102551731739553 |8.422372930122124|
 |1     |5      |0.0     |30.992848261160407|8.417746234353766|
 
-**Output - "df_all_TE_0_BME.csv"**:
+#### Output - "df_all_TE_0_BME.csv":
 This file contains **all** information about all ionic species in the equilibrium. This can be useful if you want to know a certain concentration of e.g. a reactive species.
 |FIELD1|species_f|species|val               |pK_a             |K_a                  |pK_b|K_b                   |g                  |c                    |N_TE|I                 |pH               |c_mM                 |cont_mM              |c_BME_percent|
 |------|---------|-------|------------------|-----------------|---------------------|----|----------------------|-------------------|---------------------|----|------------------|-----------------|---------------------|---------------------|-------------|
