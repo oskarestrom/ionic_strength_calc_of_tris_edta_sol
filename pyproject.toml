@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ionic_strength_calc_of_tris_edta_sol"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Oskar E. Strom", email="oskarestrom@protonmail.com" },
 ]
