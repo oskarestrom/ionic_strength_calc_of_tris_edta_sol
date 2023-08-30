@@ -18,7 +18,7 @@ pip install pandas >= 1.4.4
 ```
 
 
-### Install the package
+### Installing the package
 Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta-sol/0.0.2/). Install it on your anaconda prompt by:
 ```shell 
 pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-sol==0.0.2
@@ -56,7 +56,7 @@ You can contribute by making a general ionic-strength-calculator for all kinds o
 ## How the script works
 The script calculates the ionic strength based on the detailed description by [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) ( See the bottom of the page for a reference list). For an even more detailed description of the chemistry, look at the two papers from Persat et al.. We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
 
-#### SymPy
+### SymPy
 This script relies on the equation solving functionality of the python library SymPy (v. 1.10.1).
 
 See the following links for some information of equation solving in SymPy:
@@ -68,7 +68,7 @@ See the following links for some information of equation solving in SymPy:
 Below I give brief chemistry explanations of some of the terms used. See [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) for a more detailed description.
 
 
-#### Ionic strength
+### Ionic strength
 The ionic strength, $I$, is calculated by summing the product of the concentration and squared charge of all ions in the solution:
 
 $$I = \dfrac{1}{2} \sum_{i=1}^{n} c_i z_i^2$$
@@ -89,7 +89,7 @@ We make the following assumptions:
 - Valency of Tris: 1, EDTA (multivalent): 1-4, BME: 1.
 - The temperature, T = 25$`^{\circ}`$ C for determining the pKs
 
-#### Calculation of the ionic strength for TE with BME
+### Calculation of the ionic strength for TE with BME
 
 We have the following product from Sigma-Aldrich:  - Tris-EDTA buffer solution, 100 x, for molecular biology
 (Code: T9285-100ML)
