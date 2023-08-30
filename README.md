@@ -7,7 +7,7 @@ This package calculates the Ionic Strength and pH of a Tris-EDTA solution (with 
 
 ### Dependencies
 
-First install Sympy (version 1.10.1) by writing this in your anaconda prompt:
+First install [Sympy](https://www.sympy.org/en/index.html) (version 1.10.1) by writing this in your anaconda prompt:
 ```shell
 pip install sympy==1.10.1
 ```
@@ -141,14 +141,14 @@ Then, the ionic strength is given by the following for TE:
 
 $$I = 1/2\left( [TH^+] + [H^+] + [OH^-] + 4[H_2E^{2-}] + 9[HE^{3-}] + 16[E^{4-}] + [\beta^{-}] \right)$$
 
-#### Steps to calculate the ionic strength of a multivalent ion solution:
+### Steps to calculate the ionic strength of a multivalent ion solution:
 [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4)describes in the appendix C of their article how to calculate the ionic strength of a solution:
 1. Guess the activity coefficients, $\gamma_X$=1 for all species. 
 1. Solve the equations 1-9 and get a value of the ionic strength.
 1. Get new values of the activity coefficients $\gamma_X$ based on the new value of the ionic strength.
 1. Repeat the two previous steps till the ionic strength converges.
 
-#### References
+### References
 Iarko, V., Werner, E., Nyberg, L. K., Müller, V., Fritzsche, J., Ambjörnsson, T., ... & Mehlig, B. (2015). Extension of nanoconfined DNA: Quantitative comparison between experiment and theory. Physical review E, 92(6), 062701.
 
 Persat, A., Chambers, R. D., & Santiago, J. G. (2009). Basic principles of electrolyte chemistry for microfluidic electrokinetics. Part I: acid–base equilibria and pH buffers. Lab on a Chip, 9(17), 2437-2453.
