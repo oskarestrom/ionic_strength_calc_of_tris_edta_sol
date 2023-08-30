@@ -17,9 +17,9 @@ pip install pandas >= 1.4.4
 
 
 ### Install the package
-Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta-sol/0.0.1/). Install it on your anaconda prompt by:
+Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta-sol/0.0.2/). Install it on your anaconda prompt by:
 ```shell 
-pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-sol==0.0.1
+pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-sol==0.0.2
 ```
 
 This is how a script using the package could look like:
