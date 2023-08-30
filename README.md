@@ -177,7 +177,7 @@ Then, the ionic strength is given by the following for TE:
 $$I = 1/2\left( [TH^+] + [H^+] + [OH^-] + 4[H_2E^{2-}] + 9[HE^{3-}] + 16[E^{4-}] + [\beta^{-}] \right)$$
 
 ### Steps to calculate the ionic strength of a multivalent ion solution:
-[Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4)describes in the appendix C of their article how to calculate the ionic strength of a solution:
+[Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) describes in the appendix C of their article how to calculate the ionic strength of a solution:
 1. Guess the activity coefficients, $\gamma_X$=1 for all species. 
 1. Solve the equations 1-9 and get a value of the ionic strength.
 1. Get new values of the activity coefficients $\gamma_X$ based on the new value of the ionic strength.
