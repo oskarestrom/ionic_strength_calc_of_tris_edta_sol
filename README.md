@@ -4,7 +4,7 @@ You can use this package to calculate the Ionic Strength of a Tris-EDTA solution
 ## Quick Start Guide
 
 First install Sympy (version 1.10.1) by writing this in your anaconda prompt:
-```console
+```bash
 pip install sympy==1.10.1
 ```
 
