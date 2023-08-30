@@ -3,7 +3,7 @@ requires = ["hatchling", "numpy>=1.21.5", "pandas>=1.4.4", "sympy==1.10.1"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ionic_strength_calc_of_tris_edta"
+name = "ionic_strength_calc_of_tris_edta_sol"
 version = "0.0.1"
 authors = [
   { name="Oskar E. Strom", email="oskarestrom@protonmail.com" },
@@ -18,4 +18,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/oskarestrom/nd2handling/ionic_strength_calc_of_tris_edta"
+"Homepage" = "https://github.com/oskarestrom/nd2handling/ionic_strength_calc_of_tris_edta_sol"
