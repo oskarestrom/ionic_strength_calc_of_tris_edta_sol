@@ -24,7 +24,7 @@ pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-so
 
 This is how a script using the package could look like:
 ```python
-import ionic_strength_calc_of_TE
+import ionic_strength_calc_of_tris_edta_sol.calc as ion
 import numpy as np
 
 #Set the concentration of the TE ions in mM in the array  concTE (here 1 mM and 5 mM):
@@ -40,10 +40,10 @@ settings = {
     'showEq': False, #True if the equilibrium equations should be shown
     'showConc': False, #True if the concentrations should be shown
     'showCoeffs': False, #True if the coefficients should be shown
-    'basepath' : r'C:\Users\XX\', #Path to the folder where the results should be saved
+    'basepath' : r'', #Path to the folder where the results should be saved
 }
 
-ionic_strength_calc_of_TE.calc_ionic_strength_TE(concTE, settings)
+ion.calc_ionic_strength_TE(concTE, settings)
 ```
 
 See the files "df_TE_0_BME.csv" and "df_all_TE_0_BME.csv" in this repository for the output files by the code above.
