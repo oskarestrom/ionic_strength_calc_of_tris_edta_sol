@@ -77,7 +77,7 @@ This file contains **all** information about all ionic species in the equilibriu
 
 
 ## Contributions
-You can contribute by making a general ionic-strength-calculator for all kinds of solutions. Please send me an email if you want to collaborate on this.
+You can contribute to this project! Please send me an email if you want to collaborate on this. A major contribution would be making a general ionic-strength-calculator for all kinds of solutions. 
 
 ## How the script works
 The script calculates the ionic strength based on the detailed description by [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4) ( See the bottom of the page for a reference list). For an even more detailed description of the chemistry, look at the two papers from Persat et al.. We basically get a series of equations that needs to be solved. In these equations, the disassociation constants together with the total species concentrations are known but the concentrations of the ionic species are not. The script works iteratively, calculating the ionic strength and pH stepwise (see all steps below). 
