@@ -23,7 +23,7 @@ Currently the package can be found on [test.pypi.org](https://test.pypi.org/proj
 ```shell 
 pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-sol==0.0.2
 ```
-
+### Using the package
 This is how a script using the package could look like:
 ```python
 import ionic_strength_calc_of_tris_edta_sol.calc as ion
@@ -47,13 +47,17 @@ settings = {
 
 ion.calc_ionic_strength_TE(concTE, settings)
 ```
+### Output
+See the files "df_TE_0_BME.csv" and "df_all_TE_0_BME.csv" in this repository for the output by the code above. I also post the content here:
 **Output - "df_TE_0_BME.csv"**:
+This file contains a list of the samples used. Here, two concentrations of Tris-EDTA were used (1 mM and 5 mM). The resulting ionic strength and pH are presented.
 |FIELD1|conc_TE|conc_BME|I                 |pH               |
 |------|-------|--------|------------------|-----------------|
 |0     |1      |0.0     |6.102551731739553 |8.422372930122124|
 |1     |5      |0.0     |30.992848261160407|8.417746234353766|
 
 **Output - "df_all_TE_0_BME.csv"**:
+This file contains **all** information about all ionic species in the equilibrium. This can be useful if you want to know a certain concentration of e.g. a reactive species.
 |FIELD1|species_f|species|val               |pK_a             |K_a                  |pK_b|K_b                   |g                  |c                    |N_TE|I                 |pH               |c_mM                 |cont_mM              |c_BME_percent|
 |------|---------|-------|------------------|-----------------|---------------------|----|----------------------|-------------------|---------------------|----|------------------|-----------------|---------------------|---------------------|-------------|
 |0     |$[TH^{+}]$|[TH^{+}]|1                 |0.0              |                     |5.94|1.1481536214968817e-06|0.8480252333759359 |0.01524850479767449  |5   |30.992848261160407|8.417746234353766|15.24850479767449    |7.624252398837245    |0            |
@@ -71,8 +75,6 @@ ion.calc_ionic_strength_TE(concTE, settings)
 |12    |$[H^{+}]$|[H^{+}]|1                 |14.0             |1e-14                |    |                      |0.8480252333759359 |3.821675125839302e-09|5   |30.992848261160407|8.417746234353766|3.821675125839302e-06|1.910837562919651e-06|0            |
 |13    |$[OH^{-}]$|[OH^{-}]|-1                |0.0              |                     |    |                      |0.8480252333759359 |3.638552822886325e-06|5   |30.992848261160407|8.417746234353766|0.0036385528228863252|0.0018192764114431626|0            |
 
-
-See the files "df_TE_0_BME.csv" and "df_all_TE_0_BME.csv" in this repository for the output by the code above.
 
 ## Contributions
 You can contribute by making a general ionic-strength-calculator for all kinds of solutions. Please send me an email if you want to collaborate on this.
@@ -112,6 +114,11 @@ Note that [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.06
 We make the following assumptions:
 - Valency of Tris: 1, EDTA (multivalent): 1-4, BME: 1.
 - The temperature, T = 25$`^{\circ}`$ C for determining the pKs
+- That the following values are correct:
+    - $pK_w$ = 14.0 #Dissociation constant for water at T = 25$`^{\circ}`$ C.
+    $pK_b_{Tris}$ = 5.94 #Tris base dissociation constant, For T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    $pK_a_{EDTA}$ = 1.99,2.67,6.16,10.26 - EDTA acid dissociation constants, For T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    $pK_a_{BME}$ = 9.6 #BME acid dissociation constant, for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
 
 ### Calculation of the ionic strength for TE with BME
 
