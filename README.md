@@ -119,7 +119,7 @@ We make the following assumptions:
     - Tris base dissociation constant, $pK_{b_{Tris}}$ = 5.94 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
     - EDTA acid dissociation constants, $pK_{a_{EDTA}}$ = 1.99,2.67,6.16,10.26 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
     - BME acid dissociation constant $pK_{a_{BME}}$ = 9.6 for T = 25$`^{\circ}`$ C from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
-    - The constant for the Davies equation, A = 0.51 from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
+    - The terms for the Davies equation, A = 0.51, B = 0.3 (see the Davies equation above), from [Iarko et al.](https://journals.aps.org/pre/pdf/10.1103/PhysRevE.92.062701?casa_token=XRW2tXi736wAAAAA%3AKD0YkiBiHr__Hf6wHgsKtXdIQTb6tmdhWEhxoqcUC6J4nm0WNqYeHUvNyV1-pWcVZvrY2hMzQmA4).
     - Molar mass for BME, $M_{BME}$ = 78.13 g/mol, Source: Sigma-Aldrich
     - Density for BME, $\rho_{BME}$ = 1.114 g/mL for T = 25$`^{\circ}`$, Source: Thomas Scientific
 
