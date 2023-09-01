@@ -17,12 +17,15 @@ pip install numpy >= 1.21.5
 pip install pandas >= 1.4.4
 ```
 
-
 ### Installing the package
 Currently the package can be found on [test.pypi.org](https://test.pypi.org/project/ionic-strength-calc-of-tris-edta-sol/0.0.2/). Install it on your anaconda prompt by:
 ```shell 
 pip install -i https://test.pypi.org/simple/ ionic-strength-calc-of-tris-edta-sol==0.0.2
 ```
+### Cite this work
+In a short amount of time, this work will have a Digital Object Identifier (DOI) through Zenedo that you can cite.
+
+
 ### Using the package
 This is how a script using the package could look like:
 ```python
